@@ -1,0 +1,4 @@
+<h1>Dashboard</h1>
+<app-card *ngFor="let url of imageURLs" (selectImage) = "chooseImage($event)" [image] = "url"></app-card>
+<br>
+<img [src] = "imageURL" width="50%" height="400px"/>

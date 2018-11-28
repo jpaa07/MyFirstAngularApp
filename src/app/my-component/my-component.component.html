@@ -1,9 +1,11 @@
 <h1>This is cool! 😃</h1>
 <h1>My Name {{ name }}</h1>
 <div class="content">
-    <img [src]="imgSource">
     <h2> {{ count }}</h2>
     <button (click)="count = count + 1" >Add 1</button>
     <input [disabled]="disable">
     <button (click)="disable = disable ? false: true" >Toggle input enable</button>
+
+    <input (keyup)="showImage($event.target.value)" />
+    <img [src]="imgSource">
 </div>
